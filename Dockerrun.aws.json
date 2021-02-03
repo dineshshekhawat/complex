@@ -1,0 +1,23 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+        {
+            "name": "client",
+            "image": "dinesh1408/multi-client",
+            "hostName": "client",
+            "essential": false
+        },
+        {
+            "name": "server",
+            "image": "dinesh1408/multi-server",
+            "hostName": "api",
+            "essential": false
+        },
+        {
+            "name": "worker",
+            "image": "dinesh1408/multi-worker",
+            "hostName": "worker",
+            "essential": false
+        }
+    ]
+}
