@@ -21,7 +21,7 @@ after_success:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     
     # Take these images and push to Docker Hub
-    - docker push dinesh1408/multi-client
+    - docker push dinesh1407/multi-client
     - docker push dinesh1408/multi-nginx
     - docker push dinesh1408/multi-server
     - docker push dinesh1408/multi-worker
