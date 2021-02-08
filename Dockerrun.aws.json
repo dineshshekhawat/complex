@@ -18,6 +18,19 @@
             "image": "dinesh1408/multi-worker",
             "hostName": "worker",
             "essential": false
+        },
+        {
+            "name": "nginx",
+            "image": "dinesh1408/multi-nginx",
+            "hostName": "nginx",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ],
+            "links": ["client", "server"]
         }
     ]
 }
