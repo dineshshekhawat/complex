@@ -9,6 +9,10 @@ class Fib extends Component {
   };
 
   componentDidMount() {
+    this.refreshView();
+  }
+
+  refreshView = () => {
     this.fetchValues();
     this.fetchIndexes();
   }
@@ -32,6 +36,7 @@ class Fib extends Component {
       index: this.state.index
     });
     this.setState({ index: '' });
+    this.refreshView();
   };
 
   renderSeenIndexes() {

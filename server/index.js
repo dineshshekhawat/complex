@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 
 app.listen(5000, err => {
     console.log('Listening');
-    setTimeout(init, 4000);
+    setTimeout(init, 10000);
 });
 
 init = () => {
@@ -83,7 +83,7 @@ app.get('/values/current', async (req, res) => {
     });
 });
 
-app.post('/value', async (req, res) => {
+app.post('/values', async (req, res) => {
     const index = req.body.index;
 
     if (parseInt(index) > 40) {
